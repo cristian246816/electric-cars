@@ -1,0 +1,150 @@
+body {
+    margin: 0%;
+    padding: 0%;
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 0.2fr 0.2fr 1fr 0.2fr;
+    grid-template-areas: 
+    "header"
+    "aside"
+    "main"
+    "footer";
+}
+
+/* header */
+
+.item1 {
+    background-color: rgb(85, 77, 189);
+    grid-area: header;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.lista_menu {
+    display: none;
+    color: white;
+    font-size: 20px;
+}
+
+/* aside */
+
+.item2 {
+    background-color: rgb(235, 228, 228);
+    grid-area: aside;
+}
+
+aside {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.texto_aside {
+    margin: 0%;
+}
+
+.selector {
+    width: 80%;
+    height: 35%;
+}
+
+/* main */
+
+.item3 {
+    background-color: white;
+    grid-area: main;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    height: 400px;
+    width: 250px;
+    border: solid 1px black;
+    border-radius: 5px;
+    text-align: center;
+    margin: 3px;
+    
+}
+
+.imagen_auto {
+    height: 200px;
+    width: 250px;
+}
+
+.boton {
+    background-color: rgb(56, 56, 175);
+    color: white;
+    height: 30px;
+    width: 70px;
+    margin-left: 110px;
+    border-radius: 5px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.item3 {
+    display: grid;
+    overflow-y: auto;
+}
+
+/* footer */
+
+.item4 {
+    background-color: rgb(40, 40, 170);
+    grid-area: footer;
+}
+
+footer {
+    text-align: center;
+    color: white;
+}
+
+.texto_footer {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+/* Escritorio */
+
+@media screen and (min-width: 576px) {
+    .container {
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 1fr 10fr 1fr;
+        grid-template-areas: 
+        "header aside" 
+        "header main" 
+        "footer main";
+        
+    }
+    .item3 {
+        grid-template-columns: repeat(4, 1fr);
+}
+
+    .item1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    .lista_menu {
+        display: block;
+    }
+
+}
+
+
+
